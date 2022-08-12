@@ -74,7 +74,8 @@ const stdUtils = new (function () {
       } else {
         expires = '';
       }
-      document.cookie = name + '=' + value + expires + '; path=/';
+      document.cookie =
+        name + '=' + value + expires + '; path=/; SameSite=None; Secure';
     };
     this.create = create;
 
